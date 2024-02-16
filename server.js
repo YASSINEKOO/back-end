@@ -3,15 +3,15 @@ import bodyParser from 'body-parser';
 //const express = require('express');
 //const bodyParser = require('body-parser');
 import usersRouter from './routers/users.js';
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
+import Rundb from './config.js';
 
-dotenv.config();
-mongoose
-  .connect(process.env.MONGO_URL)
-  .then(() => console.log("🚀 ~ MONGO db connected:"))
-  .catch((err) => console.log("🚀 ~ err:", err));
+// 
+// mongoose
+//   .connect(MONGO_URL)
+//   .then(() => console.log("🚀 ~ MONGO db connected:"))
+//   .catch((err) => console.log("🚀 ~ err:", err));
 
+Rundb().catch(console.dir);
 
 const app = express();
 const port = 3000;
