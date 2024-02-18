@@ -5,7 +5,7 @@ const productsController = {
         const newProduct = new Product(req.body);
         try {
             await newProduct.save();
-            res.status(200).json({ message: "Product created successfully" });
+            res.status(201).json({ message: "Product created successfully", product: newProduct });
         } catch (error) {
             res.status(500).json({ message: "Failed to create product" });
         }

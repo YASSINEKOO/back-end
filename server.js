@@ -2,7 +2,9 @@ import express from 'express';
 import bodyParser from 'body-parser';
 //const express = require('express');
 //const bodyParser = require('body-parser');
-import usersRouter from './routers/users.js';
+import productsRouter from './routers/productsRouter.js';
+import usersRouter from './routers/usersRouter.js';
+
 import Rundb from './config.js';
 
 // 
@@ -17,7 +19,9 @@ const app = express();
 const port = 3000;
 
 app.use(bodyParser.json());
+app.use('/products', productsRouter);
 app.use('/users', usersRouter);
+
 
 app.get('/', (req, res) => {
   // Handle API logic here

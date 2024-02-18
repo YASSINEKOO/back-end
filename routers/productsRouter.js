@@ -1,22 +1,22 @@
 import express from 'express';
 import productsController from '../controllers/productsController.js';
 
-const router = express.Router();
+const productsRouter = express.Router();
 
-router.get('/' , productsController.getAllProducts
+productsRouter.get('/' , productsController.getAllProducts
     // (req, res) => {
     // res.json({ message: 'find all users'});
     // }
 );
 
-router.get('/:id', productsController.getProduct
+productsRouter.get('/:id', productsController.getProduct
 //   (req, res) => {
 //   res.send(req.params.bookId)
 
 // }
 );
 
-router.post('/', productsController.createProduct
+productsRouter.post('/', productsController.createProduct
 //     (req, res) => {
 //     const newUser = req.body;
 //     res.send( newUser );
@@ -24,11 +24,11 @@ router.post('/', productsController.createProduct
 // }
 );
 
-router.delete('/search/:key', productsController.searchProduct
+productsRouter.delete('/search/:key', productsController.searchProduct
 //   (req, res) => {
 //   const { userId } = req.params;
 //   res.send(`Delete record with id ${id}`);
 // }
 );
 
-export default router;
+export default productsRouter;
