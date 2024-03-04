@@ -12,7 +12,6 @@ productsRouter.get('/' , productsController.getAllProducts
 productsRouter.get('/:id', productsController.getProduct
 //   (req, res) => {
 //   res.send(req.params.bookId)
-
 // }
 );
 

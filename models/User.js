@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-const ProductSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     usertitle: {type: String, require: true},
     userInitial: {type: String, require: true},
     imageUrl: {type: String, require: true},
@@ -13,5 +13,5 @@ const ProductSchema = new mongoose.Schema({
 
 },{ timestamps: true});
 
-const User = mongoose.model('User', ProductSchema);
+const User = mongoose.model('User', userSchema);
 export default User;

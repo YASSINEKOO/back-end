@@ -3,20 +3,20 @@ import usersController from '../controllers/usersController.js';
 
 const router = express.Router();
 
-router.get('/' , usersController.getAllusers
+router.get('/' , usersController.getAllUsers
     // (req, res) => {
     // res.json({ message: 'find all users'});
     // }
 );
 
-router.get('/:id', usersController.getuser
+router.get('/:id', usersController.getUserById
 //   (req, res) => {
 //   res.send(req.params.bookId)
 
 // }
 );
 
-router.post('/', usersController.createuser
+router.post('/', usersController.createUser
 //     (req, res) => {
 //     const newUser = req.body;
 //     res.send( newUser );
@@ -24,7 +24,7 @@ router.post('/', usersController.createuser
 // }
 );
 
-router.delete('/search/:key', usersController.searchuser
+router.delete('/search/:key', usersController.searchUsers
 //   (req, res) => {
 //   const { userId } = req.params;
 //   res.send(`Delete record with id ${id}`);

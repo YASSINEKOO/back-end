@@ -13,7 +13,7 @@ import Rundb from './config.js';
 //   .then(() => console.log("🚀 ~ MONGO db connected:"))
 //   .catch((err) => console.log("🚀 ~ err:", err));
 
-Rundb().catch(console.dir);
+const client = Rundb();
 
 const app = express();
 const port = 3000;
