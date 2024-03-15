@@ -11,7 +11,8 @@ const userSchema = new mongoose.Schema({
     userfavourits: {type: String, require: true},
     notifications: {type: String, require: true},
 
-},{ timestamps: true});
+});
+//,{ timestamps: true}
 
 const User = mongoose.model('User', userSchema);
 export default User;
